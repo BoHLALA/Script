@@ -32,7 +32,7 @@ if [ -f $MY_TMP_FILE ]; then
 	echo ''
 	if [ $MY_RESULT -eq 0 ]; then
         echo "########################################################################"
-        echo "#                   skyBoHLALA_FHD INSTALLED SUCCESSFULLY              #"
+        echo "#                   slyk-BoHLALA_FHD INSTALLED SUCCESSFULLY              #"
         echo "#                       BY BoHLALA - support on                        #"
         echo "#              https://www.tunisia-sat.com/forums/forums               #"
         echo "########################################################################"
