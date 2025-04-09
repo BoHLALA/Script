@@ -3,7 +3,7 @@
 description= Developed By Bo.HLALA .. ^_^  ready to upgrade... Lets Fun !!!
 #########################################################
 #########################################################
-MY_FILE="skyBoHLALA_FHD.tar.gz"
+MY_FILE="slyk-BoHLALA_FHD.tar.gz"
 MY_TMP_FILE="/var/volatile/tmp/"$MY_FILE
 #########################################################
 
@@ -14,7 +14,7 @@ echo $MY_SEP
 echo ''
 
 
-wget -O /var/volatile/tmp/skyBoHLALA_FHD.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/ksa/main/skyBoHLALA_FHD.tar.gz"
+wget -O /var/volatile/tmp/slyk-BoHLALA_FHD.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/ksa/main/slyk-BoHLALA_FHD.tar.gz"
 
 
 if [ -f $MY_TMP_FILE ]; then
