@@ -12,13 +12,15 @@ MY_SEP='============================================================='
 echo $MY_SEP
 echo 'Downloading '$MY_FILE' ...'
 echo $MY_SEP
+echo 'Downloading '$MY_FILE1' ...'
+echo $MY_SEP
 echo ''
 
 wget -O /var/volatile/tmp/BoHLALA_Plugin.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/BoHLALA_Plugin.tar.gz"
 
 rm -rf "/usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD"
 
-if [ -f $MY_TMP_FILE ]; then
+if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
 
 	echo ''
 	echo $MY_SEP
@@ -26,14 +28,16 @@ if [ -f $MY_TMP_FILE ]; then
 	echo $MY_SEP
 	echo ''
 	tar -xzvf $MY_TMP_FILE -C /
+	tar -xzvf $MY_TMP_FILE1 -C /
 	MY_RESULT=$?
 
 	rm -f $MY_TMP_FILE > /dev/null 2>&1
+	rm -f $MY_TMP_FILE1 > /dev/null 2>&1
 
 	echo ''
 	if [ $MY_RESULT -eq 0 ]; then
         echo "###################################################################"
-        echo "#         Plugin BoHLALA_FHD v_2.2 INSTALLED SUCCESSFULLY         #"
+        echo "#         skin BoHLALA_FHD v_2.2 INSTALLED SUCCESSFULLY           #"
         echo "#                     Developed By Bo.HLALA                       #"
         echo "#            https://www.tunisia-sat.com/forums/forums            #"
         echo "#                https://www.linuxsat-support.com/                #"
