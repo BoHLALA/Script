@@ -4,10 +4,8 @@ version= 2.2
 description= Developed By Bo.HLALA .. ^_^  ready to upgrade... Lets Fun !!!
 #########################################################
 #########################################################
-MY_FILE="BoHLALA_Plugin.tar.gz"
+MY_FILE="byBO-HLALA_KiddaC_Skin_E2sentials.tar.gz"
 MY_TMP_FILE="/var/volatile/tmp/"$MY_FILE
-MY_FILE1="BoHLALA_FHD-Mini.tar.gz"
-MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
 #########################################################
 
 MY_SEP='============================================================='
@@ -18,11 +16,9 @@ echo 'Downloading '$MY_FILE1' ...'
 echo $MY_SEP
 echo ''
 
-wget -O /var/volatile/tmp/BoHLALA_Plugin.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/BoHLALA_Plugin.tar.gz"
-wget -O /var/volatile/tmp/BoHLALA_FHD-Mini.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/BoHLALA_FHD-Mini.tar.gz"
+wget -O /var/volatile/tmp/byBO-HLALA_KiddaC_Skin_E2sentials.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/byBO-HLALA_KiddaC_Skin_E2sentials.tar.gz"
 
-rm -rf "/usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD"
-rm -rf "/usr/share/enigma2/BoHLALA_FHD"
+rm -rf "/usr/lib/enigma2/python/Plugins/Extensions/KiddaC_Skin_E2sentials"
 
 if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
 
@@ -41,7 +37,7 @@ if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
 	echo ''
 	if [ $MY_RESULT -eq 0 ]; then
         echo "###################################################################"
-        echo "#         skin BoHLALA_FHD v_2.2 INSTALLED SUCCESSFULLY           #"
+        echo "#    byBO-HLALA_KiddaC_Skin_E2sentials INSTALLED SUCCESSFULLY     #"
         echo "#                     Developed By Bo.HLALA                       #"
         echo "#            https://www.tunisia-sat.com/forums/forums            #"
         echo "#                https://www.linuxsat-support.com/                #"
