@@ -4,7 +4,7 @@ version= 2.2
 description= Developed By Bo.HLALA .. ^_^  ready to upgrade... Lets Fun !!!
 #########################################################
 #########################################################
-MY_FILE="byBO-HLALA_KiddaC_Skin_E2sentials.tar.gz"
+MY_FILE="byBO-HLALA_KiddaC-Skin-E2sentials.tar.gz"
 MY_TMP_FILE="/var/volatile/tmp/"$MY_FILE
 #########################################################
 
@@ -16,7 +16,7 @@ echo 'Downloading '$MY_FILE1' ...'
 echo $MY_SEP
 echo ''
 
-wget -O /var/volatile/tmp/byBO-HLALA_KiddaC_Skin_E2sentials.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/byBO-HLALA_KiddaC_Skin_E2sentials.tar.gz"
+wget -O /var/volatile/tmp/byBO-HLALA_KiddaC-Skin-E2sentials.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/byBO-HLALA_KiddaC-Skin-E2sentials.tar.gz"
 
 rm -rf "/usr/lib/enigma2/python/Plugins/Extensions/KiddaC_Skin_E2sentials"
 
