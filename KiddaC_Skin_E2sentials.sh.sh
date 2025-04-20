@@ -10,7 +10,7 @@
 # Plugin	... Enter Manually
 ########################################################################################################################
 
-PACKAGE_DIR='Script/K.S.A'
+PACKAGE_DIR='Plugins/K.S.A'
 
 MY_FILE="byBO-HLALA_KiddaC-Skin-E2sentials.tar.gz"
 
