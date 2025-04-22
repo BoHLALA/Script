@@ -1,6 +1,6 @@
 #!/bin/sh
 #########################################################
-version= 2.2
+version= 2.3
 description= Developed By Bo.HLALA .. ^_^  ready to upgrade... Lets Fun !!!
 #########################################################
 #########################################################
@@ -41,7 +41,7 @@ if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
 	echo ''
 	if [ $MY_RESULT -eq 0 ]; then
         echo "###################################################################"
-        echo "#         skin BoHLALA_FHD v_2.2 INSTALLED SUCCESSFULLY           #"
+        echo "#         skin BoHLALA_FHD v_2.3 INSTALLED SUCCESSFULLY           #"
         echo "#                     Developed By Bo.HLALA                       #"
         echo "#            https://www.tunisia-sat.com/forums/forums            #"
         echo "#                https://www.linuxsat-support.com/                #"
