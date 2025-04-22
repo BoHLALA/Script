@@ -1,11 +1,11 @@
 #!/bin/sh
 #########################################################
-version= 2.2
+version=2.2
 description= Developed By Bo.HLALA .. ^_^  ready to upgrade... Lets Fun !!!
 #########################################################
 #########################################################
 MY_FILE="BoHLALA_Plugin.tar.gz"
-MY_TMP_FILE="/var/volatile/tmp/"$MY_FILE
+MY_TMP_FILE="/var/volatile/tmp/"$MY_FILE  
 MY_FILE1="BoHLALA_FHD-Mini.tar.gz"
 MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
 #########################################################
