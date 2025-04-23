@@ -17,12 +17,12 @@ echo $MY_SEP
 echo 'Downloading '$MY_FILE1' ...'
 echo $MY_SEP
 echo ''
-wget -O /var/volatile/tmp/version.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/version.tar.gz"
-wget -O /var/volatile/tmp/BoHLALA_Plugin.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/BoHLALA_Plugin.tar.gz"
 wget -O /var/volatile/tmp/BoHLALA_FHD-Mini.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/BoHLALA_FHD-Mini.tar.gz"
+wget -O /var/volatile/tmp/BoHLALA_Plugin.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/BoHLALA_Plugin.tar.gz"
+wget -O /var/volatile/tmp/version.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/version.tar.gz"
 
-rm -rf "/usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD"
 rm -rf "/usr/share/enigma2/BoHLALA_FHD"
+rm -rf "/usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD"
 
 if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
 
