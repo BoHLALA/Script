@@ -53,7 +53,6 @@ wget -O /var/volatile/tmp/BoHLALA_FHD-Mini.tar.gz --no-check-certificate "https:
 
 rm -rf "/usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD"
 rm -rf "/usr/share/enigma2/BoHLALA_FHD"
-
 rm -rf "/usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD/fonts"
 rm -rf "/usr/share/enigma2/BoHLALA_FHD/k.s.a/interface"
 rm -rf "/usr/share/enigma2/BoHLALA_FHD/k.s.a/xtraEvent"
