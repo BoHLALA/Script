@@ -1,5 +1,6 @@
 #!/bin/sh
-#########################################################
+########################################################version=2.0
+#
 description= Developed By Bo.HLALA .. ^_^  ready to upgrade... Lets Fun !!!
 #########################################################
 #########################################################
@@ -16,7 +17,7 @@ echo $MY_SEP
 echo 'Downloading '$MY_FILE1' ...'
 echo $MY_SEP
 echo ''
-
+wget -O /var/volatile/tmp/version.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/version.tar.gz"
 wget -O /var/volatile/tmp/BoHLALA_Plugin.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/BoHLALA_Plugin.tar.gz"
 wget -O /var/volatile/tmp/BoHLALA_FHD-Mini.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/BoHLALA_FHD-Mini.tar.gz"
 
