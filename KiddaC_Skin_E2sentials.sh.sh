@@ -1,4 +1,5 @@
 #!/bin/sh
+version=2.0
  description= Developed By Bo.HLALA .. ^_^  ready to upgrade... Lets Fun !!!
 # ==============================================
 # SCRIPT : DOWNLOAD AND INSTALL xstreamity #
