@@ -1,4 +1,3 @@
-version= 2.2
 description= BoHLALA_FHD V2.2\n Skin BoHLALA_FHD ready to upgrade... Lets Fun . ^_^ . !!!
 
 #########################################################
