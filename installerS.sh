@@ -7,6 +7,35 @@ MY_FILE="BoHLALA_Plugin.tar.gz"
 MY_TMP_FILE="/var/volatile/tmp/"$MY_FILE  
 MY_FILE1="BoHLALA_FHD-Mini.tar.gz"
 MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
+#########################################################
+MY_FILE="BootLogo.tar.gz"
+MY_TMP_FILE="/var/volatile/tmp/"$MY_FILE  
+MY_FILE1="BoHLALA_FHD-Mini.tar.gz"
+MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
+MY_FILE="BoHLALA_Plugin.tar.gz"
+MY_TMP_FILE="/var/volatile/tmp/"$MY_FILE  
+MY_FILE1="interface.tar.gz"
+MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
+MY_FILE="posterX.tar.gz"
+MY_TMP_FILE="/var/volatile/tmp/"$MY_FILE  
+MY_FILE1="xtraEvent.tar.gz"
+MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
+MY_FILE1="Channel_List.tar.gz"
+MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
+MY_FILE1="xtraEvent.tar.gz"
+MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
+MY_FILE1="slyk-BoHLALA_FHD.tar.gz"
+MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
+MY_FILE1="Box_LCD4linux.tar.gz"
+MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
+MY_FILE1="EMCSelection.tar.gz"
+MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
+MY_FILE1="PluginBrowser.tar.gz"
+MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
+MY_FILE1="VolumeBar.tar.gz"
+MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
+MY_FILE1="fonts.tar.gz"
+MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
 
 #########################################################
 
@@ -18,36 +47,18 @@ echo $MY_SEP
 echo ''
 
 wget -O /var/volatile/tmp/BoHLALA_Plugin.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/BoHLALA_Plugin.tar.gz"
-wget -O /var/volatile/tmp/BoHLALA_FHD-Mini.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/BoHLALA_FHD.tar.gz"
-
-                      
-                        if index == "BootLogo":
-                                os.system("wget --no-check-certificate -O '/tmp/BootLogo.tar.gz' 'https://raw.githubusercontent.com/BoHLALA/Ksa/main/BootLogo.tar.gz'")
-                                os.system("tar -xzf /tmp/BootLogo.tar.gz -C /")
-                        elif index == "Box_LCD4linux":
-                                os.system("wget --no-check-certificate -O '/tmp/Box_LCD4linux.tar.gz' 'https://raw.githubusercontent.com/BoHLALA/Ksa/main/Box_LCD4linux.tar.gz'")
-                                os.system("tar -xzf /tmp/Box_LCD4linux.tar.gz -C /")
-                        elif index == "EMCSelection":
-                                os.system("wget --no-check-certificate -O '/tmp/EMCSelection.tar.gz' 'https://raw.githubusercontent.com/BoHLALA/Ksa/main/EMCSelection.tar.gz'")
-                                os.system("tar -xzf /tmp/EMCSelection.tar.gz -C /")
-                        elif index == "PluginBrowser":
-                                os.system("wget --no-check-certificate -O '/tmp/PluginBrowser.tar.gz' 'https://raw.githubusercontent.com/BoHLALA/Ksa/main/PluginBrowser.tar.gz'")
-                                os.system("tar -xzf /tmp/PluginBrowser.tar.gz -C /")
-                        elif index == "VolumeBar":
-                                os.system("wget --no-check-certificate -O '/tmp/VolumeBar.tar.gz' 'https://raw.githubusercontent.com/BoHLALA/Ksa/main/VolumeBar.tar.gz'")
-                                os.system("tar -xzf /tmp/VolumeBar.tar.gz -C /")
-                        elif index == "fonts":
-                                os.system("wget --no-check-certificate -O '/tmp/fonts.tar.gz' 'https://raw.githubusercontent.com/BoHLALA/Ksa/main/fonts.tar.gz'")
-                                os.system("tar -xzf /tmp/fonts.tar.gz -C /")
-                        elif index == "interface":
-                                os.system("wget --no-check-certificate -O '/tmp/interface.tar.gz' 'https://raw.githubusercontent.com/BoHLALA/Ksa/main/interface.tar.gz'")
-                                os.system("tar -xzf /tmp/interface.tar.gz -C /")
-                        elif index == "posterX":
-                                os.system("wget --no-check-certificate -O '/tmp/posterX.tar.gz' 'https://raw.githubusercontent.com/BoHLALA/Ksa/main/posterX.tar.gz'")
-                                os.system("tar -xzf /tmp/posterX.tar.gz -C /")
-                        elif index == "Channel_List":
-                                os.system("wget --no-check-certificate -O '/tmp/Channel_List.tar.gz' 'https://raw.githubusercontent.com/BoHLALA/Ksa/main/Channel_List.tar.gz'")
-                                os.system("tar -xzf /tmp/Channel_List.tar.gz -C /")
+wget -O /var/volatile/tmp/BoHLALA_FHD-Mini.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/BoHLALA_FHD-Mini.tar.gz"
+wget -O /var/volatile/tmp/BootLogo.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/BootLogo.tar.gz"
+wget -O /var/volatile/tmp/interface.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/interface.tar.gz"                      
+wget -O /var/volatile/tmp/posterX.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/posterX.tar.gz"
+wget -O /var/volatile/tmp/xtraEvent.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/xtraEvent.tar.gz"
+wget -O /var/volatile/tmp/Channel_List.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/Channel_List.tar.gz"
+wget -O /var/volatile/tmp/slyk-BoHLALA_FHD.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/slyk-BoHLALA_FHD.tar.gz"
+wget -O /var/volatile/tmp/Box_LCD4linux.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/Box_LCD4linux.tar.gz"
+wget -O /var/volatile/tmp/EMCSelection.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/EMCSelection.tar.gz"
+wget -O /var/volatile/tmp/PluginBrowser.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/PluginBrowser.tar.gz"
+wget -O /var/volatile/tmp/VolumeBar.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/VolumeBar.tar.gz"
+wget -O /var/volatile/tmp/fonts.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/fonts.tar.gz"
 
 
 
