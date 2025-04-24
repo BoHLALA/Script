@@ -29,14 +29,18 @@ else
 fi
 MY_TMP_FILE="/tmp/"$MY_FILE
 
-echo ''
-echo '************************************************************'
-echo '**                         STARTED                        **'
-echo '************************************************************'
-echo "**                 Uploaded by: BoHLALA                   **"
-echo "**                                                        **"
-echo "************************************************************"
-echo ''
+
+
+        echo "###################################################################"
+        echo "#       KiddaC-Skin-E2sentials INSTALLED SUCCESSFULLY             #"
+        echo "#                     Developed By Bo.HLALA                       #"
+        echo "#            https://www.tunisia-sat.com/forums/forums            #"
+        echo "#                https://www.linuxsat-support.com/                #"
+        echo "###################################################################"
+        echo "#        Sucessfully Download skin ... Lets Fun !!!  .. ^_^       #"
+        echo "###################################################################"
+
+
 
 # Remove previous file (if any)
 rm -f $MY_TMP_FILE > /dev/null 2>&1
