@@ -18,8 +18,6 @@ echo 'Downloading '$MY_FILE1' ...'
 echo $MY_SEP
 echo ''
 
-#wget -O /var/volatile/tmp/BoHLALA_Plugin.tar.xz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/BoHLALA_Plugin.tar.xz"
-#wget -O /var/volatile/tmp/BoHLALA_Plugin.tar.xz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/BoHLALA_Plugin.tar.xz"
 wget -O /var/volatile/tmp/BoHLALA_Plugin.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/BoHLALA_Plugin.tar.gz"
 wget -O /var/volatile/tmp/BoHLALA_FHD-Mini.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/skins/main/BoHLALA_FHD-Mini.tar.gz"
 
