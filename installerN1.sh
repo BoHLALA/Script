@@ -40,6 +40,78 @@ if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
 
 	echo ''
 	if [ $MY_RESULT -eq 0 ]; then
+
+
+	SKINDIR='/usr/share/enigma2/BoHLALA_FHD'
+	TMPDIR='/tmp'
+	BOXMODEL=$(cat /etc/hostname)
+	set -e
+	echo "Supported Images are :"
+	echo "1- OpenATV 7.3 , OpenATV 7.4.x , OpenATV 7.5.x , OpenATV 7.6"
+	echo "2- Egami 10.4 , Egami 10.5 , Egami 10.6"
+	echo "3- PurE2 7.3 , 7.4"
+	echo "4- OpenSPA 8.3 , 8.4"
+	sleep 2
+	echo "Identify your image ...."
+	sleep 2
+	if grep -qs -i "openATV" /etc/image-version; then
+    	echo "You have OpenAtv image"
+        echo "Adjusting some files according to your image..."
+        mv $SKINDIR/image_logo/openatv/imagelogo.png $SKINDIR
+	mv $SKINDIR/image_logo/openatv/top_logo.png $SKINDIR
+	if [ -f /usr/share/enigma2/"${BOXMODEL}".png ] ; then
+		cp /usr/share/enigma2/"${BOXMODEL}".png $SKINDIR/boximage.png
+	else
+		cp /usr/share/enigma2/BoHLALA_FHD/main/boximage.png $SKINDIR/boximage.png
+		cp /usr/share/enigma2/BoHLALA_FHD/main/top_logo.png $SKINDIR/top_logo.png
+	fi
+   
+	elif grep -qs -i "egami" /etc/image-version; then
+        echo "You have Egami image"
+	echo "Adjusting some files according to your image..."
+	mv $SKINDIR/image_logo/egami/imagelogo.png $SKINDIR
+	mv $SKINDIR/image_logo/egami/top_logo.png $SKINDIR
+	if [ -f /usr/share/enigma2/"${BOXMODEL}".png ] ; then
+		cp /usr/share/enigma2/"${BOXMODEL}".png $SKINDIR/boximage.png
+	else
+		cp /usr/share/enigma2/BoHLALA_FHD/main/boximage.png $SKINDIR/boximage.png
+		cp /usr/share/enigma2/BoHLALA_FHD/main/top_logo.png $SKINDIR/top_logo.png
+	fi
+	
+	elif grep -qs -i "PURE2" /etc/image-version; then
+	    echo "You have PURE2 image"
+	echo "Adjusting some files according to your image..."
+	mv $SKINDIR/image_logo/pure2/imagelogo.png $SKINDIR
+	mv $SKINDIR/image_logo/pure2/top_logo.png $SKINDIR
+	if [ -f /usr/share/enigma2/"${BOXMODEL}".png ] ; then
+		cp /usr/share/enigma2/"${BOXMODEL}".png $SKINDIR/boximage.png
+	else
+		cp /usr/share/enigma2/BoHLALA_FHD/main/boximage.png $SKINDIR/boximage.png
+		cp /usr/share/enigma2/BoHLALA_FHD/main/top_logo.png $SKINDIR/top_logo.png
+	fi
+	
+	elif grep -qs -i "OpenSPA" /etc/image-version; then
+  	  echo "You have OpenSPA image"
+	echo "Adjusting some files according to your image..."
+        mv $SKINDIR/image_logo/openspa/imagelogo.png $SKINDIR
+        mv $SKINDIR/image_logo/openspa/top_logo.png $SKINDIR
+	if [ -f /usr/share/enigma2/"${BOXMODEL}".png ] ; then
+	    cp /usr/share/enigma2/"${BOXMODEL}".png $SKINDIR/boximage.png
+	else
+		cp /usr/share/enigma2/BoHLALA_FHD/main/boximage.png $SKINDIR/boximage.png
+		cp /usr/share/enigma2/BoHLALA_FHD/main/top_logo.png $SKINDIR/top_logo.png
+	fi
+	
+	else
+	  echo "even you do not have supported image , you can try BoHLALA_FHD"
+          cp /usr/share/enigma2/BoHLALA_FHD/main/boximage.png $SKINDIR/boximage.png
+	  cp /usr/share/enigma2/BoHLALA_FHD/main/top_logo.png $SKINDIR/top_logo.png
+	fi
+	sleep 2
+	echo "removing some files.... "
+	rm -rf $SKINDIR/image_logo  > /dev/null 2>&1
+	rm -rf /control  > /dev/null 2>&1
+
  
         echo "###################################################################"
         echo "#         skin BoHLALA_FHD v_2.2 INSTALLED SUCCESSFULLY           #"
