@@ -107,11 +107,6 @@ if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
           cp /usr/share/enigma2/BoHLALA_FHD/main/boximage.png $SKINDIR/boximage.png
 	  cp /usr/share/enigma2/BoHLALA_FHD/main/top_logo.png $SKINDIR/top_logo.png
 	fi
-	sleep 2
-	echo "removing some files.... "
-	rm -rf $SKINDIR/image_logo  > /dev/null 2>&1
-	rm -rf /control  > /dev/null 2>&1
-
  
         echo "###################################################################"
         echo "#         skin BoHLALA_FHD v_2.2 INSTALLED SUCCESSFULLY           #"
