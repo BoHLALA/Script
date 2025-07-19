@@ -8,7 +8,6 @@ MY_FILE="BoHLALA_Plugin.tar.gz"
 MY_TMP_FILE="/var/volatile/tmp/"$MY_FILE
 MY_FILE1="BoHLALA_FHD-Mini.tar.gz"
 MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
-
 #########################################################
 
 MY_SEP='============================================================='
@@ -41,9 +40,8 @@ if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
 
 	echo ''
 	if [ $MY_RESULT -eq 0 ]; then
-
-   
-	echo "###################################################################"
+ 
+        echo "###################################################################"
         echo "#         skin BoHLALA_FHD v_2.2 INSTALLED SUCCESSFULLY           #"
         echo "#                     Developed By Bo.HLALA                       #"
         echo "#            https://www.tunisia-sat.com/forums/forums            #"
