@@ -8,6 +8,9 @@ MY_FILE="BoHLALA_Plugin.tar.gz"
 MY_TMP_FILE="/var/volatile/tmp/"$MY_FILE
 MY_FILE1="BoHLALA_FHD-Mini.tar.gz"
 MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
+SKINDIR='/usr/share/enigma2/BoHLALA_FHD'
+TMPDIR='/tmp'
+BOXMODEL=$(cat /etc/hostname)
 #########################################################
 
 MY_SEP='============================================================='
@@ -42,9 +45,7 @@ if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
 	if [ $MY_RESULT -eq 0 ]; then
 
 
-	SKINDIR='/usr/share/enigma2/BoHLALA_FHD'
-	TMPDIR='/tmp'
-	BOXMODEL=$(cat /etc/hostname)
+
 	set -e
 	echo "Supported Images are :"
 	echo "1- OpenATV 7.3 , OpenATV 7.4.x , OpenATV 7.5.x , OpenATV 7.6"
