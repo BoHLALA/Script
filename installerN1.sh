@@ -62,8 +62,8 @@ if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
 	if [ -f /usr/share/enigma2/"${BOXMODEL}".png ] ; then
 		cp /usr/share/enigma2/"${BOXMODEL}".png $SKINDIR/boximage.png
 	else
-		cp /usr/share/enigma2/BoHLALA_FHD/main/boximage.png $SKINDIR/boximage.png
-		cp /usr/share/enigma2/BoHLALA_FHD/main/top_logo.png $SKINDIR/top_logo.png
+		cp /usr/share/enigma2/BoHLALA_FHD/boximage.png $SKINDIR/boximage.png
+		cp /usr/share/enigma2/BoHLALA_FHD/top_logo.png $SKINDIR/top_logo.png
 	fi
    
 	elif grep -qs -i "egami" /etc/image-version; then
@@ -74,8 +74,8 @@ if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
 	if [ -f /usr/share/enigma2/"${BOXMODEL}".png ] ; then
 		cp /usr/share/enigma2/"${BOXMODEL}".png $SKINDIR/boximage.png
 	else
-		cp /usr/share/enigma2/BoHLALA_FHD/main/boximage.png $SKINDIR/boximage.png
-		cp /usr/share/enigma2/BoHLALA_FHD/main/top_logo.png $SKINDIR/top_logo.png
+		cp /usr/share/enigma2/BoHLALA_FHD/boximage.png $SKINDIR/boximage.png
+		cp /usr/share/enigma2/BoHLALA_FHD/top_logo.png $SKINDIR/top_logo.png
 	fi
 	
 	elif grep -qs -i "PURE2" /etc/image-version; then
@@ -86,8 +86,8 @@ if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
 	if [ -f /usr/share/enigma2/"${BOXMODEL}".png ] ; then
 		cp /usr/share/enigma2/"${BOXMODEL}".png $SKINDIR/boximage.png
 	else
-		cp /usr/share/enigma2/BoHLALA_FHD/main/boximage.png $SKINDIR/boximage.png
-		cp /usr/share/enigma2/BoHLALA_FHD/main/top_logo.png $SKINDIR/top_logo.png
+		cp /usr/share/enigma2/BoHLALA_FHD/boximage.png $SKINDIR/boximage.png
+		cp /usr/share/enigma2/BoHLALA_FHD/top_logo.png $SKINDIR/top_logo.png
 	fi
 	
 	elif grep -qs -i "OpenSPA" /etc/image-version; then
@@ -98,14 +98,14 @@ if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
 	if [ -f /usr/share/enigma2/"${BOXMODEL}".png ] ; then
 	    cp /usr/share/enigma2/"${BOXMODEL}".png $SKINDIR/boximage.png
 	else
-		cp /usr/share/enigma2/BoHLALA_FHD/main/boximage.png $SKINDIR/boximage.png
-		cp /usr/share/enigma2/BoHLALA_FHD/main/top_logo.png $SKINDIR/top_logo.png
+		cp /usr/share/enigma2/BoHLALA_FHD/boximage.png $SKINDIR/boximage.png
+		cp /usr/share/enigma2/BoHLALA_FHD/top_logo.png $SKINDIR/top_logo.png
 	fi
 	
 	else
 	  echo "even you do not have supported image , you can try BoHLALA_FHD"
-          cp /usr/share/enigma2/BoHLALA_FHD/main/boximage.png $SKINDIR/boximage.png
-	  cp /usr/share/enigma2/BoHLALA_FHD/main/top_logo.png $SKINDIR/top_logo.png
+          cp /usr/share/enigma2/BoHLALA_FHD/boximage.png $SKINDIR/boximage.png
+	  cp /usr/share/enigma2/BoHLALA_FHD/top_logo.png $SKINDIR/top_logo.png
 	fi
  
         echo "###################################################################"
