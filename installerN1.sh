@@ -108,7 +108,8 @@ if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
           cp /usr/share/enigma2/BoHLALA_FHD/boximage.png $SKINDIR/boximage.png
 	  cp /usr/share/enigma2/BoHLALA_FHD/top_logo.png $SKINDIR/top_logo.png
  fi
-        echo "###################################################################"
+	else
+	echo "###################################################################"
         echo "#         skin BoHLALA_FHD v_2.2 INSTALLED SUCCESSFULLY           #"
         echo "#                     Developed By Bo.HLALA                       #"
         echo "#            https://www.tunisia-sat.com/forums/forums            #"
