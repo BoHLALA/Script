@@ -106,7 +106,6 @@ if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
 	  echo "even you do not have supported image , you can try BoHLALA_FHD"
           cp /usr/share/enigma2/BoHLALA_FHD/boximage.png $SKINDIR/boximage.png
 	  cp /usr/share/enigma2/BoHLALA_FHD/top_logo.png $SKINDIR/top_logo.png
-	fi
  
         echo "###################################################################"
         echo "#         skin BoHLALA_FHD v_2.2 INSTALLED SUCCESSFULLY           #"
