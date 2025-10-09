@@ -3,7 +3,7 @@
 description= Developed By Bo.HLALA .. ^_^  ready to upgrade... Lets Fun !!!
 ########################################################
 
-MY_FILE="BootLogo.tar.gz"
+MY_FILE="xtraEvent.tar.gz"
 MY_TMP_FILE="/var/volatile/tmp/"$MY_FILE
 
 #########################################################
@@ -14,9 +14,9 @@ echo 'Downloading '$MY_FILE' ...'
 echo $MY_SEP
 echo ''
 
-wget -O /var/volatile/tmp/BootLogo.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/BootLogo.tar.gz"
+wget -O /var/volatile/tmp/xtraEvent.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/xtraEvent.tar.gz"
 
-rm -rf "/usr/share/enigma2/BoHLALA_FHD/k.s.a/Bootlogo"
+rm -rf "/usr/share/enigma2/BoHLALA_FHD/k.s.a/xtraEvent"
 
 if [ -f $MY_TMP_FILE ]; then
 
@@ -62,4 +62,5 @@ else
 fi
 # ----------------------------------------------------------------------------------------------------------
 fi
+
 
