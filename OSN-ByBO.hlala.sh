@@ -10,8 +10,9 @@ echo 1 > /proc/sys/vm/drop_caches
 echo 2 > /proc/sys/vm/drop_caches
 echo 3 > /proc/sys/vm/drop_caches
 
-python /usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD/locale/ar/osn/slyk/OSN-ByBO.hlala.py
-rm -rf /usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD/locale/ar/osn/slyk/*.json 
+if test -f /usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD/locale/ar/slyk/osn/OSN_channels_data.json; then
+    python /usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD/locale/ar/osn/slyk/OSN-ByBO.hlala.py
+fi
 
 
 
