@@ -10,7 +10,7 @@ echo 1 > /proc/sys/vm/drop_caches
 echo 2 > /proc/sys/vm/drop_caches
 echo 3 > /proc/sys/vm/drop_caches
 
-if test -f /usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD/locale/ar/slyk/osn/OSN_channels_data.json; then
+if test -f /usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD/locale/ar/slyk/all_channels_data.json; then
     python /usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD/locale/ar/slyk/osn/sky-ByBO.hlala.py
 
 
