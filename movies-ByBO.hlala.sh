@@ -41,8 +41,8 @@ fi
 
 
 
-echo "---------------------------------------------------"
-echo "#        Developed By Bo.HLALA .. ^_^ 👌         #"
+echo "                                                   "
+echo "        Developed By Bo.HLALA .. ^_^ 👌          " 
 echo "#                                                 #"
 echo "#     Updated Successfully ... Lets Fun !!!       #"
 echo "#         Thanks for using our script             #"
