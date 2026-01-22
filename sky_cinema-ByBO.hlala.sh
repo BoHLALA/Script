@@ -3,7 +3,7 @@
 # Slyk Universal toppicks V5 (C) kiddac. 2019
 # Slyk Universal toppicks V5 (C) By BO.hlala. 2026
 
-python /usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD/locale/ar/slyk/osn/sky_scraper.py
+python /usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD/locale/ar/slyk/osn/sky_cinema_scraper.py
 
 # Slyk Universal toppicks V5 (C) ByBO.hlala. 2026
 echo 1 > /proc/sys/vm/drop_caches
@@ -11,7 +11,7 @@ echo 2 > /proc/sys/vm/drop_caches
 echo 3 > /proc/sys/vm/drop_caches
 
 if test -f /usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD/locale/ar/slyk/all_channels_data.json; then
-    python /usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD/locale/ar/slyk/osn/sky-ByBO.hlala.py
+    python /usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD/locale/ar/slyk/osn/sky_cinema-ByBO.hlala.py
 
 
 
