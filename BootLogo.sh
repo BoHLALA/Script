@@ -1,23 +1,65 @@
 #!/bin/sh
+#########################################################
+description= Developed By Bo.HLALA .. ^_^  ready to upgrade... Lets Fun !!!
+########################################################
 
-URL="https://raw.githubusercontent.com/BoHLALA/Ksa/main/BootLogo.tar.gz"
-FILE="/tmp/BootLogo.tar.gz"
+MY_FILE="BootLogo.tar.gz"
+MY_TMP_FILE="/var/volatile/tmp/"$MY_FILE
 
-rm -f "$FILE"
-wget "$URL" -O "$FILE"
+#########################################################
 
-if [ -s "$FILE" ]; then
-    tar -xzvf "$FILE" -C /
-    rm -f "$FILE"
+MY_SEP='============================================================='
+echo $MY_SEP
+echo 'Downloading '$MY_FILE' ...'
+echo $MY_SEP
+echo ''
+wget -O /var/volatile/tmp/BootLogo.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/BootLogo.tar.gz"                      
 
-    echo "BootLogo Installed Successfully."
-    echo "By: قــدام (BoHLALA)"
+rm -rf "/usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD"
+rm -rf "/usr/share/oatv-bootlogo"
 
-    if which systemctl > /dev/null 2>&1; then
-        sleep 2; systemctl restart enigma2
-    else
-        init 4; sleep 4; init 3
-    fi
+if [ -f $MY_TMP_FILE ]; then
+
+	echo ''
+	echo $MY_SEP
+	echo 'Extracting ...'
+	echo $MY_SEP
+	echo ''
+	tar -xzvf $MY_TMP_FILE -C /
+	MY_RESULT=$?
+
+	rm -f $MY_TMP_FILE > /dev/null 2>&1
+
+	echo ''
+	if [ $MY_RESULT -eq 0 ]; then
+        echo "###################################################################"
+        echo "#         skin BoHLALA_FHD v_2.2 INSTALLED SUCCESSFULLY           #"
+        echo "#                     Developed By Bo.HLALA                       #"
+        echo "#            https://www.tunisia-sat.com/forums/forums            #"
+        echo "#                https://www.linuxsat-support.com/                #"
+        echo "###################################################################"
+        echo "#        Sucessfully Download skin ... Lets Fun !!!  .. ^_^       #"
+        echo "###################################################################"
+		if which systemctl > /dev/null 2>&1; then
+			sleep 2; systemctl restart enigma2
+		else
+			init 4
+			sleep 4 > /dev/null 2>&1
+			init 3
+		fi
+	else
+		echo "   >>>>   INSTALLATION FAILED !   <<<<"
+	fi
+	 echo '**************************************************'
+	 echo '**                   FINISHED                   **'
+	 echo '**************************************************'
+	 echo ''
+	 exit 0
 else
-    echo "Download failed."
+	 echo ''
+	 echo "Download failed !"
+	 exit 1
 fi
+# ----------------------------------------------------------------------------------------------------------
+fi
+
