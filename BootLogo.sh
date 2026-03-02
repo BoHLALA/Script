@@ -18,8 +18,6 @@ echo ''
 
 wget -O /var/volatile/tmp/BootLogo.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/BootLogo.tar.gz"
 
-rm -rf "/usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD"
-rm -rf "/usr/share/oatv-bootlogo"
 
 if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
 
@@ -69,5 +67,6 @@ else
 fi
 # ----------------------------------------------------------------------------------------------------------
 fi
+
 
 
