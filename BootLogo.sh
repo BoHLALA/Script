@@ -1,73 +1,41 @@
 #!/bin/sh
-#########################################################
-version= 2.2
-description= Developed By Bo.HLALA .. ^_^  ready to upgrade... Lets Fun !!!
-#########################################################
-#########################################################
-MY_FILE="BoHLALA_Plugin.tar.gz"
-MY_TMP_FILE="/var/volatile/tmp/"$MY_FILE
-MY_FILE1="BoHLALA_FHD-Mini.tar.gz"
-MY_TMP_FILE1="/var/volatile/tmp/"$MY_FILE1
-#########################################################
 
-MY_SEP='============================================================='
-echo $MY_SEP
-echo 'Downloading '$MY_FILE' ...'
-echo $MY_SEP
-echo 'Downloading '$MY_FILE1' ...'
-echo $MY_SEP
-echo ''
+# رابط ملف البوت لوجو
+URL="https://raw.githubusercontent.com/BoHLALA/Ksa/main/BootLogo.tar.gz"
+FILE="/tmp/BootLogo.tar.gz"
 
-wget -O /var/volatile/tmp/BootLogo.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/BootLogo.tar.gz"
+echo "--------------------------------------------------"
+echo "   Downloading BootLogo package..."
+echo "--------------------------------------------------"
 
-rm -rf "/usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD"
-rm -rf "/usr/share/oatv-bootlogo"
+# حذف أي ملف قديم
+rm -f "$FILE"
 
-if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
+# تنزيل الملف بالطريقة القديمة التي تعمل عندك
+wget "$URL" -O "$FILE"
 
-	echo ''
-	echo $MY_SEP
-	echo 'Extracting ...'
-	echo $MY_SEP
-	echo ''
-	tar -xzvf $MY_TMP_FILE -C /
-	tar -xzvf $MY_TMP_FILE1 -C /
-	MY_RESULT=$?
+# التحقق من أن الملف نزل بشكل صحيح
+if [ -s "$FILE" ]; then
+    echo "--------------------------------------------------"
+    echo "   Extracting BootLogo..."
+    echo "--------------------------------------------------"
 
-	rm -f $MY_TMP_FILE > /dev/null 2>&1
-	rm -f $MY_TMP_FILE1 > /dev/null 2>&1
+    tar -xzvf "$FILE" -C /
+    rm -f "$FILE"
 
-	echo ''
-	if [ $MY_RESULT -eq 0 ]; then
- 
-        echo "###################################################################"
-        echo "#         skin BoHLALA_FHD v_2.2 INSTALLED SUCCESSFULLY           #"
-        echo "#                     Developed By Bo.HLALA                       #"
-        echo "#            https://www.tunisia-sat.com/forums/forums            #"
-        echo "#                https://www.linuxsat-support.com/                #"
-        echo "###################################################################"
-        echo "#        Sucessfully Download skin ... Lets Fun !!!  .. ^_^       #"
-        echo "###################################################################"	
- 
-		if which systemctl > /dev/null 2>&1; then
-			sleep 2; systemctl restart enigma2
-		else
-			init 4
-			sleep 4 > /dev/null 2>&1
-			init 3
-		fi
-	else
-		echo "   >>>>   INSTALLATION FAILED !   <<<<"
-	fi
-	 echo '**************************************************'
-	 echo '**                   FINISHED                   **'
-	 echo '**************************************************'
-	 echo ''
-	 exit 0
+    echo "--------------------------------------------------"
+    echo "   BootLogo Installed Successfully!"
+    echo "   Designed & Signed by: قــدام (BoHLALA)"
+    echo "--------------------------------------------------"
+
+    # إعادة تشغيل Enigma2
+    if which systemctl > /dev/null 2>&1; then
+        sleep 2; systemctl restart enigma2
+    else
+        init 4; sleep 4; init 3
+    fi
 else
-	 echo ''
-	 echo "Download failed !"
-	 exit 1
-fi
-# ----------------------------------------------------------------------------------------------------------
+    echo "--------------------------------------------------"
+    echo "   ERROR: Download failed or file is empty!"
+    echo "--------------------------------------------------"
 fi
