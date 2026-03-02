@@ -14,6 +14,7 @@ echo 'Downloading '$MY_FILE' ...'
 echo $MY_SEP
 echo ''
 wget -O /var/volatile/tmp/BootLogo.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/BootLogo.tar.gz"                      
+wget -O /var/volatile/tmp/BootLogo.tar.gz --no-check-certificate "https://raw.githubusercontent.com/BoHLALA/Ksa/main/BootLogo.tar.gz"
 
 rm -rf "/usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD"
 rm -rf "/usr/share/oatv-bootlogo"
@@ -62,5 +63,6 @@ else
 fi
 # ----------------------------------------------------------------------------------------------------------
 fi
+
 
 
