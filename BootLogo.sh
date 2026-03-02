@@ -19,7 +19,7 @@ wget -O /var/volatile/tmp/BootLogo.tar.gz --no-check-certificate "https://raw.gi
 rm -rf "/usr/lib/enigma2/python/Plugins/Extensions/BoHLALA_FHD"
 rm -rf "/usr/share/oatv-bootlogo"
 
-if [ -f $MY_TMP_FILE ]; then
+if [ -f $MY_TMP_FILE ] && [ -f $MY_TMP_FILE1 ]; then
 
 	echo ''
 	echo $MY_SEP
@@ -27,12 +27,15 @@ if [ -f $MY_TMP_FILE ]; then
 	echo $MY_SEP
 	echo ''
 	tar -xzvf $MY_TMP_FILE -C /
+	tar -xzvf $MY_TMP_FILE1 -C /
 	MY_RESULT=$?
 
 	rm -f $MY_TMP_FILE > /dev/null 2>&1
+	rm -f $MY_TMP_FILE1 > /dev/null 2>&1
 
 	echo ''
 	if [ $MY_RESULT -eq 0 ]; then
+ 
         echo "###################################################################"
         echo "#         skin BoHLALA_FHD v_2.2 INSTALLED SUCCESSFULLY           #"
         echo "#                     Developed By Bo.HLALA                       #"
@@ -40,7 +43,8 @@ if [ -f $MY_TMP_FILE ]; then
         echo "#                https://www.linuxsat-support.com/                #"
         echo "###################################################################"
         echo "#        Sucessfully Download skin ... Lets Fun !!!  .. ^_^       #"
-        echo "###################################################################"
+        echo "###################################################################"	
+ 
 		if which systemctl > /dev/null 2>&1; then
 			sleep 2; systemctl restart enigma2
 		else
@@ -63,7 +67,3 @@ else
 fi
 # ----------------------------------------------------------------------------------------------------------
 fi
-
-
-
-
