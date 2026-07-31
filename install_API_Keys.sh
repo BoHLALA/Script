@@ -3,11 +3,11 @@
 # xtraEvent API Keys Auto-Installer by BoHLALA
 # =========================================================
 
-# 1. Stop Enigma2 GUI
+# 1. Stop Enigma2 GUI (To unlock /etc/enigma2/settings)
 init 4
 sleep 2
 
-# 2. Create Dedicated Directory (Without spaces)
+# 2. Create Dedicated Directory
 mkdir -p /etc/enigma2/xtraEventKeys
 
 # 3. Create Clean API Files
@@ -16,16 +16,20 @@ echo "a99d487bb3426e5f3a60dea6d3d3c7ef" > /etc/enigma2/xtraEventKeys/tvdb.api
 echo "cb1d9f55" > /etc/enigma2/xtraEventKeys/omdb.api
 echo "6d231536dea4318a88cb2520ce89473b" > /etc/enigma2/xtraEventKeys/fanart.api
 
-# 4. Set File Permissions
-chmod 644 /etc/enigma2/xtraEventKeys/*.api
+# 4. Set File Permissions (Safe way)
+chmod 755 /etc/enigma2/xtraEventKeys
+chmod 644 /etc/enigma2/xtraEventKeys/*
 
-# 5. Clean Settings File to Force Reading Files
-sed -i '/config.plugins.xtraEvent.tmdbAPI/d' /etc/enigma2/settings
-sed -i '/config.plugins.xtraEvent.omdbAPI/d' /etc/enigma2/settings
-sed -i '/config.plugins.xtraEvent.fanartAPI/d' /etc/enigma2/settings
-sed -i '/config.plugins.xtraEvent.tvdbAPI/d' /etc/enigma2/settings
+# 5. Clean Settings File to Force Reading API Files
+if [ -f /etc/enigma2/settings ]; then
+    sed -i '/config.plugins.xtraEvent.tmdbAPI/d' /etc/enigma2/settings
+    sed -i '/config.plugins.xtraEvent.omdbAPI/d' /etc/enigma2/settings
+    sed -i '/config.plugins.xtraEvent.fanartAPI/d' /etc/enigma2/settings
+    sed -i '/config.plugins.xtraEvent.tvdbAPI/d' /etc/enigma2/settings
+fi
 
 # 6. Restart Enigma2 GUI
 init 3
 
+exit 0
 exit 0
